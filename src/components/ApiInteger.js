@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 function JokeComponent() {
   const [joke, setJoke] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -35,7 +36,7 @@ function JokeComponent() {
       <p><strong>Punchline:</strong> {joke.punchline}</p>
       <p><small>Créé le: {new Date(joke.createdAt).toLocaleString()}</small></p>
       <p><small>Mis à jour le: {new Date(joke.updatedAt).toLocaleString()}</small></p>
-      <button onClick={fetchJoke}>Nouvelle blague</button>
+      <button onClick={fetchJoke} className='joke-button'>Nouvelle blague</button>
     </div>
   );
 }
