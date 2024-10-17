@@ -12,7 +12,7 @@ function JokeComponent() {
 
   const fetchJoke = async () => {
     try {
-      const response = await fetch('https://carambar-api-dhjw.onrender.com');
+      const response = await fetch('https://carambar-api-dhjw.onrender.com/api/jokes/random');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

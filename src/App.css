@@ -1,4 +1,4 @@
-.Header  {
+.Body  {
   text-align: center;
 }
 
@@ -6,6 +6,7 @@
   /* height: 40vmin; */
   width:100vh;
   pointer-events: none;
+  zoom: 100%;
 }
 /* PAR DEFAUT */
 /* @media (prefers-reduced-motion: no-preference) {
@@ -24,7 +25,10 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(236, 9, 9);
+  /* color: rgb(236, 9, 9); */
+  border-color: rgb(236, 9, 9);
+  border: 2px;
+  border-style: groove;
 }
 
 .joke-button {
@@ -36,7 +40,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 80px 2px;
   cursor: pointer;
   border-radius: 4px;
 }

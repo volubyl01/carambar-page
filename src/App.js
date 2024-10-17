@@ -6,7 +6,8 @@ import ApiInteger from "./components/ApiInteger";
 
 function App() {
 	return (
-		<div className="Header">
+		<div className="Body">
+
 			<header className="App-header">
 				<img src={banner} className="App-logo" alt="banner" />
 			</header>
