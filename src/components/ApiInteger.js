@@ -7,10 +7,10 @@ function JokeComponent() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchJokes();
+    fetchJoke();
   }, []);
 
-  const fetchJokes = async () => {
+  const fetchJoke = async () => {
     try {
       setLoading(true);
       
@@ -61,7 +61,7 @@ function JokeComponent() {
         </div>
       ))}
 
-      <button onClick={fetchJokes} className='joke-button'>Nouvelles blagues</button>
+      <button onClick={fetchJoke} className='joke-button'>Nouvelles blagues</button>
     </div>
   );
 }
