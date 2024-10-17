@@ -39,6 +39,6 @@
 }
 #background {
   background-image: url(./images/carambar_smile.png);
-  background-size: cover;
+  background-size:auto;
   background-position: center;
 }
