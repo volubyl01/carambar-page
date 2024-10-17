@@ -13,7 +13,7 @@ function App() {
 			</header>
 			<div className="joke-button">
 				<h1>Blague aléatoire</h1>
-				<ApiInteger />
+				<ApiInteger/>
 			</div>
 		</div>
 	);

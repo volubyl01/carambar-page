@@ -44,3 +44,6 @@
   cursor: pointer;
   border-radius: 4px;
 }
+.fond {
+  background-image: url(./images/carambar_smile.png);
+}
