@@ -11,8 +11,8 @@ function App() {
 			<header className="App-header">
 				<img src={banner} className="App-logo" alt="banner" />
 			</header>
-			<div className="joke-button">
-				<h1>Blague aléatoire</h1>
+			<h1>Blague aléatoire</h1>
+			<div className="joke-section">
 				<ApiInteger/>
 			</div>
 		</div>
