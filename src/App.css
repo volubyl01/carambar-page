@@ -67,6 +67,7 @@
 .joke-section {
 	/* width: 600px; */
 	text-align: center;
+	text-shadow: #FC0 1px 0 10px;
 	background-color: #774005;
 	border: 0.5rem solid;
 	border-color: deeppink;
@@ -89,6 +90,10 @@ button {
 	cursor: pointer;
 	border-radius: 15px;
 	min-height: 40px;
+	font-size: 25px;
+	padding: 5px;
+	margin:3px;
+	box-shadow: 0px 10px 23px -5px #ffee02;
 }
 
 small {
@@ -118,6 +123,8 @@ p {
 	/* text-shadow: rgb(25, 0, 255) 1px 0 10px; */
 	text-shadow: #ff00aa 1px 0 10px;
 	height : 3rem;
+	font-size: 35px;
+	box-shadow: 0px 10px 23px -5px #ffee02;
 
 	display: flex;
     align-items: center;
