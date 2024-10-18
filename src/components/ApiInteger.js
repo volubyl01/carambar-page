@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 function ApiInteger() {
 	const [renderJoke, setRenderJoke] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -49,6 +48,7 @@ function ApiInteger() {
 				</p>
 				<p>
 					{renderJoke.punchline}
+</p>
 				</p>
 				<p>
 					<small>
@@ -62,7 +62,9 @@ function ApiInteger() {
 				</p>
 			</div>
 			<button onClick={fetchJoke} className="joke-button">
+
 				Une autre blague
+
 			</button>
 		</div>
 	);
