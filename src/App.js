@@ -1,7 +1,8 @@
-import React from "react";
-import banner from "./images/banner-carambar.png";
+import React, { useState } from 'react';
+import banner from "./images/logo-carambar.png";
 import "./App.css";
 import ApiInteger from "./components/ApiInteger";
+import ContactForm from "./components/ContactForm"; 
 
 // composant header
 function Header() {
@@ -15,24 +16,36 @@ function Header() {
 
 // composant Footer
 function Footer() {
+	const [showContactForm, setShowContactForm] = useState(false);
+
+	const toggleContactForm = () => {
+	  setShowContactForm(!showContactForm);
+	};
   return (
     <footer className="App-footer">
-      <p>Contact</p>
+	  <button onClick={toggleContactForm} className="button-form">
+        {showContactForm ? "Fermer" : "Recevoir les liens des repos"}
+      </button>
+	  {showContactForm && <ContactForm />}
     </footer>
   );
 }
 
 function App() {
+
   return (
     <div className="App">
       <Header />
       <main className="joke-section">
         <ApiInteger />
+		
+
+     
       </main>
       <Footer />
     </div>
   );
-}
 
+}
 export default App;
 
