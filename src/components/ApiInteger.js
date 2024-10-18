@@ -15,7 +15,9 @@ function ApiInteger() {
 			setError(null);
 
 			// Requête vers l'API sur Render.com
-			const API_URL = process.env.REACT_APP_API_URL || "https://carambar-api-dhjw.onrender.com";
+			const API_URL =
+				process.env.REACT_APP_API_URL ||
+				"https://carambar-api-dhjw.onrender.com";
 			const renderResponse = await fetch(`${API_URL}/api/v1/jokes/random`);
 			if (!renderResponse.ok) {
 				throw new Error(`HTTP error! status: ${renderResponse.status}`);
@@ -41,15 +43,11 @@ function ApiInteger() {
 
 	return (
 		<div>
-			<div className='la-blague'>
+			<div className="la-blague">
 				<h3>Blague n°{renderJoke.id}</h3>
-				<p>
-					 {renderJoke.setup}
-				</p>
-				<p>
-					{renderJoke.punchline}
-</p>
-				</p>
+				<p>{renderJoke.setup}</p>
+				<p>{renderJoke.punchline}</p>
+
 				<p>
 					<small>
 						Créé le: {new Date(renderJoke.createdAt).toLocaleString()}
@@ -62,9 +60,7 @@ function ApiInteger() {
 				</p>
 			</div>
 			<button onClick={fetchJoke} className="joke-button">
-
 				Une autre blague
-
 			</button>
 		</div>
 	);
