@@ -41,14 +41,14 @@ function ApiInteger() {
 
 	return (
 		<div>
-			<h2>Blague de Render.com</h2>
-			<div>
-				<h3>Blague #{renderJoke.id}</h3>
+			<div className='la-blague'>
+				<h3>Blague n°{renderJoke.id}</h3>
 				<p>
-					<strong>Setup:</strong> {renderJoke.setup}
+					 {renderJoke.setup}
 				</p>
 				<p>
-					<strong>Punchline:</strong> {renderJoke.punchline}
+					{renderJoke.punchline}
+</p>
 				</p>
 				<p>
 					<small>
@@ -62,7 +62,9 @@ function ApiInteger() {
 				</p>
 			</div>
 			<button onClick={fetchJoke} className="joke-button">
-				Nouvelle blague
+
+				Une autre blague
+
 			</button>
 		</div>
 	);
