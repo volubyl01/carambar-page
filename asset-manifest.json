@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/carambar-page/static/css/main.1bb1d369.css",
+    "main.css": "/carambar-page/static/css/main.b4068872.css",
     "main.js": "/carambar-page/static/js/main.ec2c8f01.js",
     "static/js/453.48077f5b.chunk.js": "/carambar-page/static/js/453.48077f5b.chunk.js",
     "static/media/banner-carambar.png": "/carambar-page/static/media/banner-carambar.3efeb554d72ce2dffe3d.png",
     "static/media/logo-carambar.png": "/carambar-page/static/media/logo-carambar.d30cd4f65f66ef6eda2f.png",
     "index.html": "/carambar-page/index.html",
-    "main.1bb1d369.css.map": "/carambar-page/static/css/main.1bb1d369.css.map",
+    "main.b4068872.css.map": "/carambar-page/static/css/main.b4068872.css.map",
     "main.ec2c8f01.js.map": "/carambar-page/static/js/main.ec2c8f01.js.map",
     "453.48077f5b.chunk.js.map": "/carambar-page/static/js/453.48077f5b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bb1d369.css",
+    "static/css/main.b4068872.css",
     "static/js/main.ec2c8f01.js"
   ]
 }
