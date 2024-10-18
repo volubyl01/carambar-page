@@ -3,7 +3,7 @@
 .App {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 90vh;
 	text-align: center;
 	margin: 0;
 	padding: 0;
@@ -17,18 +17,19 @@
 
 .App-logo {
 	/* height: 40vmin; */
-	max-width: 50%;
+	max-width: 20%;
 	height: auto;
 	pointer-events: none;
-	text-align: left;
+	filter: saturate(110%);
 }
 
 .App-header {
 	background-color: #ffee02;
 	width: 100%;
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	font-size: 30px;
+	font-size: 38px;
 	color: rgb(236, 9, 9);
 	border-color: rgb(236, 9, 9);
 	border: 2px;
@@ -43,20 +44,28 @@
 	background-size: 30%;
 	min-width:100%;
 	min-height: 80px;
-	text-align: right;
+	text-align: center;
 	font-size: 21px;
 	color: rgb(236, 9, 9);
 	border-color: rgb(236, 9, 9);
 	border: 2px;
 	border-style: groove;
 	font-family: "Playwrite GB S", cursive;
+	padding-top: 20px;
+
+	justify-content:center;
 }
-.App-footer p {
-	padding-right: 60px;
+.button-form {
+	background-color : deeppink;
+	color: #ffee02;
+	cursor: pointer;
+	border-radius: 15px;
+	min-width: 100px;
 }
 
+
 .joke-section {
-	width: 600px;
+	/* width: 600px; */
 	text-align: center;
 	background-color: #774005;
 	border: 0.5rem solid;
@@ -81,6 +90,7 @@ button {
 	border-radius: 15px;
 	min-height: 40px;
 }
+
 small {
 	font-size: 8px;
 	margin-block: 10px;
@@ -101,17 +111,29 @@ p {
 	padding-right: 68px;
 }
 .la-blague-numero h3 {
-	background-color: gold;
+	background-color: #ffee02;
 	border-radius: 30px;
 	color:rgb(236, 9, 9);
 	text-transform: uppercase;
-	text-shadow: rgb(25, 0, 255) 1px 0 10px;
+	/* text-shadow: rgb(25, 0, 255) 1px 0 10px; */
+	text-shadow: #ff00aa 1px 0 10px;
 	height : 3rem;
 
 	display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.formulaire {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+	min-height: 2rem;
+}
+
+
 /* Media queries pour le responsive */
 @media screen and (max-width: 768px) {
 	.App-header {
