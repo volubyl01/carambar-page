@@ -4,6 +4,7 @@ function ApiInteger() {
 	const [renderJoke, setRenderJoke] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+	const [showPunchline, setShowPunchline] = useState(false);
 
 	useEffect(() => {
 		fetchJoke();
@@ -11,30 +12,36 @@ function ApiInteger() {
 
 	const fetchJoke = async () => {
 		try {
-		  setLoading(true);
-		  setError(null);
-	  
-		  // Requête vers l'API sur Render.com ou en local
-		  const API_URL = process.env.REACT_APP_API_URL || "https://carambar-api-dhjw.onrender.com";
-		  console.log("API URL:", API_URL);
-		  const response = await fetch(`${API_URL}/api/v1/jokes/random`);
-	  
-		  if (!response.ok) {
-			const errorText = await response.text();
-			console.error('Réponse API:', errorText);
-			throw new Error(`HTTP error! status: ${response.status}`);
-		  }
-	  
-		  const renderData = await response.json();
-		  setRenderJoke(renderData);
+			setLoading(true);
+			setError(null);
+			setShowPunchline(false); // Réinitialise la visibilité de la punchline
+
+			// Requête vers l'API sur Render.com ou en local
+			const API_URL =
+				process.env.REACT_APP_API_URL ||
+				"https://carambar-api-dhjw.onrender.com";
+			console.log("API URL:", API_URL);
+			const response = await fetch(`${API_URL}/api/v1/jokes/random`);
+
+			if (!response.ok) {
+				const errorText = await response.text();
+				console.error("Réponse API:", errorText);
+				throw new Error(`HTTP error! status: ${response.status}`);
+			}
+
+			const renderData = await response.json();
+			setRenderJoke(renderData);
 		} catch (e) {
-		  console.error('Erreur lors de la requête:', e);
-		  setError(e.message);
+			console.error("Erreur lors de la requête:", e);
+			setError(e.message);
 		} finally {
-		  setLoading(false);
+			setLoading(false);
 		}
-	  };
-	  
+	};
+
+	const togglePunchline = () => {
+		setShowPunchline(!showPunchline);
+	};
 
 	if (loading) return <div>Chargement...</div>;
 	if (error) return <div>Erreur : {error}</div>;
@@ -44,15 +51,18 @@ function ApiInteger() {
 		<div>
 			<div className="la-blague-numero">
 				<h3>Blague n°{renderJoke.id}</h3>
-			
 				<p>{renderJoke.setup}</p>
-				<p>{renderJoke.punchline}</p>
+
+				<button onClick={togglePunchline} className="punchline-button">
+					{showPunchline ? "Cacher la solution" : "Voir la solution"}
+				</button>
+				{showPunchline && <p>{renderJoke.punchline}</p>}
 
 				<p className="dates">
 					<small>
 						Créé le: {new Date(renderJoke.createdAt).toLocaleString()}
 					</small>
-				
+
 					<small>
 						Mis à jour le: {new Date(renderJoke.updatedAt).toLocaleString()}
 					</small>
