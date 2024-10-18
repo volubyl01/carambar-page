@@ -79,6 +79,16 @@ button {
   border-radius: 15px;
   min-height: 40px
 }
+small {
+	font-size: 8px;
+	margin-block: 10px;
+
+}
+.dates {
+	display: flex;
+	justify-content:space-between;
+	
+}
 .contact {
   min-width:200px;
   text-align: right;

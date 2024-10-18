@@ -47,16 +47,13 @@ function ApiInteger() {
 				<h3>Blague n°{renderJoke.id}</h3>
 			
 				<p>{renderJoke.setup}</p>
-				
-				
 				<p>{renderJoke.punchline}</p>
 
-				<p>
+				<p className="dates">
 					<small>
 						Créé le: {new Date(renderJoke.createdAt).toLocaleString()}
 					</small>
-				</p>
-				<p>
+				
 					<small>
 						Mis à jour le: {new Date(renderJoke.updatedAt).toLocaleString()}
 					</small>
