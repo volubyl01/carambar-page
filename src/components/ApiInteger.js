@@ -11,31 +11,29 @@ function ApiInteger() {
 
 	const fetchJoke = async () => {
 		try {
-			setLoading(true);
-			setError(null);
-
-			// Requête vers l'API sur Render.com ou en local
-			const API_URL =
-				process.env.REACT_APP_API_URL ||
-				"https://carambar-api-dhjw.onrender.com/api/v1/jokes/";
-			const renderResponse = await fetch(`${API_URL}/api/v1/jokes/random`);
-			if (!renderResponse.ok) {
-				throw new Error(`HTTP error! status: ${renderResponse.status}`);
-			}
-			const responseText = await renderResponse.text();
-			try {
-				const renderData = JSON.parse(responseText);
-				setRenderJoke(renderData);
-			} catch (parseError) {
-				console.error("Erreur de parsing JSON:", responseText);
-				throw new Error("Réponse invalide du serveur");
-			}
+		  setLoading(true);
+		  setError(null);
+	  
+		  // Requête vers l'API sur Render.com ou en local
+		  const API_URL = process.env.REACT_APP_API_URL || "https://carambar-api-dhjw.onrender.com";
+		  const response = await fetch(`${API_URL}/api/v1/jokes/random`);
+	  
+		  if (!response.ok) {
+			const errorText = await response.text();
+			console.error('Réponse API:', errorText);
+			throw new Error(`HTTP error! status: ${response.status}`);
+		  }
+	  
+		  const renderData = await response.json();
+		  setRenderJoke(renderData);
 		} catch (e) {
-			setError(e.message);
+		  console.error('Erreur lors de la requête:', e);
+		  setError(e.message);
 		} finally {
-			setLoading(false);
+		  setLoading(false);
 		}
-	};
+	  };
+	  
 
 	if (loading) return <div>Chargement...</div>;
 	if (error) return <div>Erreur : {error}</div>;
