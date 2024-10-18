@@ -1,29 +1,38 @@
-// import logo from './logo.svg';
-import banner from "./images/banner-carambar.png";
-import footer from "./images/banner-carambar.png";
-import "./App.css";
 import React from "react";
+import banner from "./images/banner-carambar.png";
+import "./App.css";
 import ApiInteger from "./components/ApiInteger";
 
+// composant header
+function Header() {
+  return (
+    <header className="App-header">
+      <img src={banner} className="App-logo" alt="banner" />
+      <h1>Les blagues Carambar</h1>
+    </header>
+  );
+}
+
+// composant Footer
+function Footer() {
+  return (
+    <footer className="App-footer">
+      <p>Contact</p>
+    </footer>
+  );
+}
+
 function App() {
-	return (
-		<div className="App">
-		<div className="App-content">
-		  <header className="App-header">
-		  <img src={banner} className="App-logo" alt="banner" />
-		  <h1>Les Blagues Carambar</h1>
-		  </header>
-		  <main className="joke-section">
-			<ApiInteger />
-		  </main>
-		</div>
-		<footer className="App-footer">
-			<div className="contact">
-		  <p>Contact</p>
-		  </div>
-		</footer>
-	  </div>
-	  );
-	}
+  return (
+    <div className="App">
+      <Header />
+      <main className="joke-section">
+        <ApiInteger />
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
 export default App;
+
