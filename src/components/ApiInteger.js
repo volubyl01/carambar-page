@@ -16,6 +16,7 @@ function ApiInteger() {
 	  
 		  // Requête vers l'API sur Render.com ou en local
 		  const API_URL = process.env.REACT_APP_API_URL || "https://carambar-api-dhjw.onrender.com";
+		  console.log("API URL:", API_URL);
 		  const response = await fetch(`${API_URL}/api/v1/jokes/random`);
 	  
 		  if (!response.ok) {
