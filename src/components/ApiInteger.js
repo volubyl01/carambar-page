@@ -14,7 +14,7 @@ function ApiInteger() {
 			setLoading(true);
 			setError(null);
 
-			// Requête vers l'API sur Render.com
+			// Requête vers l'API sur Render.com ou en local
 			const API_URL =
 				process.env.REACT_APP_API_URL ||
 				"https://carambar-api-dhjw.onrender.com";
@@ -43,9 +43,12 @@ function ApiInteger() {
 
 	return (
 		<div>
-			<div className="la-blague">
+			<div className="la-blague-numero">
 				<h3>Blague n°{renderJoke.id}</h3>
+			
 				<p>{renderJoke.setup}</p>
+				
+				
 				<p>{renderJoke.punchline}</p>
 
 				<p>
