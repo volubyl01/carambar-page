@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import banner from "./images/logo-carambar.png";
+import logo from "./images/logo-carambar.png";
 import "./App.css";
 import ApiInteger from "./components/ApiInteger";
 import ContactForm from "./components/ContactForm"; 
@@ -8,8 +8,9 @@ import ContactForm from "./components/ContactForm";
 function Header() {
   return (
     <header className="App-header">
-      <img src={banner} className="App-logo" alt="banner" />
+      <img src={logo} className="App-logo" alt="logo" />
       <h1>Les blagues Carambar</h1>
+	  <img src={logo} className="App-logo" alt="logo" />
     </header>
   );
 }
