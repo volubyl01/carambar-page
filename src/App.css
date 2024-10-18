@@ -37,7 +37,7 @@
 	font-family: "Playwrite GB S", cursive;
 	box-shadow: 0px 10px 23px -5px deeppink;
 	z-index: 2;
-	text-shadow: #ff00aa 1px 0 10px;
+	text-shadow: #ff00aa 1px 0 5px;
 }
 .App-footer {
 	background-image: url("./images/banner-carambar.png");
