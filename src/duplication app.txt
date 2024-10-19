@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import RippleButton from "./RippleButton";
 
 function ApiInteger() {
 	const [renderJoke, setRenderJoke] = useState(null);
@@ -51,12 +50,12 @@ function ApiInteger() {
 	return (
 		<div>
 			<div className="la-blague-numero">
-				<h2>Blague n°{renderJoke.id}</h2>
+				<h3>Blague n°{renderJoke.id}</h3>
 				<p>{renderJoke.setup}</p>
 
-				<RippleButton onClick={togglePunchline} className="punchline-button">
-					{showPunchline ? "Cacher la solution" : "Voir la solution !"}
-				</RippleButton>
+				<button onClick={togglePunchline} className="punchline-button">
+					{showPunchline ? "Cacher la solution" : "Voir la solution"}
+				</button>
 				{showPunchline && <p>{renderJoke.punchline}</p>}
 
 				<p className="dates">
@@ -69,8 +68,9 @@ function ApiInteger() {
 					</small>
 				</p>
 			</div>
-			
-			<button onClick={fetchJoke} className="joke-button">Blague suivante</button>
+			<button onClick={fetchJoke} className="joke-button">
+				blague suivante
+			</button>
 		</div>
 	);
 }
