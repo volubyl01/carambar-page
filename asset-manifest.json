@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/carambar-page/static/css/main.41ac1d6b.css",
-    "main.js": "/carambar-page/static/js/main.073e8725.js",
+    "main.css": "/carambar-page/static/css/main.99528195.css",
+    "main.js": "/carambar-page/static/js/main.29512bd9.js",
     "static/js/453.48077f5b.chunk.js": "/carambar-page/static/js/453.48077f5b.chunk.js",
     "static/media/banner-carambar.png": "/carambar-page/static/media/banner-carambar.3efeb554d72ce2dffe3d.png",
     "static/media/logo-carambar.png": "/carambar-page/static/media/logo-carambar.d30cd4f65f66ef6eda2f.png",
     "index.html": "/carambar-page/index.html",
-    "main.41ac1d6b.css.map": "/carambar-page/static/css/main.41ac1d6b.css.map",
-    "main.073e8725.js.map": "/carambar-page/static/js/main.073e8725.js.map",
+    "main.99528195.css.map": "/carambar-page/static/css/main.99528195.css.map",
+    "main.29512bd9.js.map": "/carambar-page/static/js/main.29512bd9.js.map",
     "453.48077f5b.chunk.js.map": "/carambar-page/static/js/453.48077f5b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41ac1d6b.css",
-    "static/js/main.073e8725.js"
+    "static/css/main.99528195.css",
+    "static/js/main.29512bd9.js"
   ]
 }
