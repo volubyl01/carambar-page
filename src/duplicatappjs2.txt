@@ -1,0 +1,58 @@
+import React, { useState } from "react";
+import "./App.css";
+import ApiInteger from "./components/ApiInteger";
+import ContactForm from "./components/ContactForm";
+import MainBackground from "./components/MainBackground";
+import logo from "./images/logo-carambar.png";
+
+
+
+// composant header
+function Header() {
+	return (
+		<header className="App-header">
+			<div>
+			{/* <img src={"$process.env.PUBLIC_URL} /images/logo-carambar.png"} alt="Logo Carambar"  className="App-logo"/> */}
+			<img src={logo} alt="Logo Carambar"  className="App-logo"/>
+			</div>
+			<h1>Les blagues Carambar</h1>
+			<div> 
+			{/* <img src="/images/logo-carambar.png" alt="Logo Carambar"  className="App-logo"/> */}
+			<img src={logo} alt="Logo Carambar"  className="App-logo"/>
+			</div>
+		</header>
+	);
+}
+
+// composant Footer
+function Footer() {
+	const [showContactForm, setShowContactForm] = useState(false);
+
+	const toggleContactForm = () => {
+		setShowContactForm(!showContactForm);
+	};
+	return (
+		<footer className="App-footer">
+			<button onClick={toggleContactForm} className="button-form">
+				{showContactForm ? "Fermer" : "Recevoir les liens des repos"}
+			</button>
+			{showContactForm && <ContactForm />}
+		</footer>
+	);
+}
+
+function App() {
+	return (
+		<div className="App" id="background">
+			<MainBackground />
+			<Header />
+			<main className="joke-section">
+				<div className="api">
+					<ApiInteger />
+				</div>
+			</main>
+			<Footer />
+		</div>
+	);
+}
+export default App;
