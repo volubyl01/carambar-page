@@ -65,6 +65,7 @@
 	border-color: deeppink;
 	color: #ffee02;
 	padding: 20px;
+	margin:22px;
 	font-size: 1rem;
 	font-family: "Playwrite GB S", cursive;
 	/* margin: auto; */
@@ -76,11 +77,11 @@ main {
 	display: flex;
 	justify-content: center;
 }
-#background {
+/* #background {
 	background-image: url(./images/carambar_smile.png);
 	background-size: auto;
 	background-position: center;
-}
+} */
 .joke-button {
 	background-color: deeppink;
 	color: #ffee02;
@@ -93,17 +94,6 @@ main {
 	margin: 3px;
 	box-shadow: 0px 10px 23px -5px #ffee02;
 	font-family: "Playwrite GB S", cursive;
-}
-.button-form {
-	background-color: deeppink;
-	border-style: none;
-	color: #ffee02;
-	cursor: pointer;
-	border-radius: 1.5rem;
-	min-width: 100px;
-	font-size: 1rem;
-	font-family: "Playwrite GB S", cursive;
-	padding: 0.5rem 1rem;
 }
 
 small {
@@ -118,13 +108,13 @@ small {
 p {
 	font-size: 28px;
 }
-.contact {
+/* .contact {
 	min-width: 200px;
 	text-align: right;
 	background-color: rgba(255, 255, 255, 0.5);
 	opacity: 0.5;
 	padding-right: 68px;
-}
+} */
 .la-blague-numero h2 {
 	background-color: #ffee02;
 	border-radius: 1.5rem;
@@ -139,13 +129,29 @@ p {
 	justify-content: center;
 }
 
-.formulaire {
+/* .formulaire {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+} */
+.button-form {
+	background-color: deeppink;
+	border-style: none;
+	color: #ffee02;
+	cursor: pointer;
+	border-radius: 1.5rem;
+	font-size: 1rem;
+	font-family: "Playwrite GB S", cursive;
+	padding: 0.3rem 0.3rem;
+}
+.inputblock {
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+	
 }
 input {
-	min-height: 2rem;
+	max-width:6rem;
 	border-radius: 13px;
 }
 
@@ -178,5 +184,10 @@ input {
 	}
 	.App-logo {
 		pointer-events: none;
+	}
+	
+	input {
+		min-height:1rem;
+		border-radius: 13px;
 	}
 }
