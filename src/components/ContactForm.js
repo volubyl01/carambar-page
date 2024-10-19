@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 function ContactForm() {
   const [formData, setFormData] = useState({
     from_name: '',
-    reply_to: '',
+    from_email: '',
     // message: '' 
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,7 +26,7 @@ function ContactForm() {
       .then((result) => {
         console.log(result.text);
         alert('Message envoyé avec succès !');
-        setFormData({ user_name: '', user_email: '', message: '' });
+        setFormData({ from_name: '', from_email: '', message: '' });
       })
       .catch((error) => {
         console.error('Erreur lors de l\'envoi du message:', error);
