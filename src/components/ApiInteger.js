@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import RippleButton from "./RippleButton";
 
 // Définir l'URL de l'API en fonction de l'environnement
-const API_URL = process.env.REACT_APP_API_URL || "https://carambar-api-dhjw.onrender.com/api/v1/jokes";
+const API_URL = process.env.NODE_ENV === 'development'
+  ? "http://localhost:3000/api/v1/jokes"
+  : (process.env.REACT_APP_API_URL || "https://carambar-api-dhjw.onrender.com/api/v1/jokes");
+
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("REACT_APP_API_URL:", process.env.REACT_APP_API_URL);
 
 function ApiInteger() {
     const [renderJoke, setRenderJoke] = useState(null);
@@ -73,5 +78,6 @@ function ApiInteger() {
         </div>
     );
 }
+console.log("API_URL being used:", API_URL);
 
 export default ApiInteger;
