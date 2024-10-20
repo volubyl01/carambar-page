@@ -90,9 +90,8 @@ function ApiInteger() {
 				{showPunchline && <p>{renderJoke.punchline}</p>}
 
 				<p className="dates">
-					<small>Créé le: {formatDate(renderJoke.createdAt)}</small>
-                    <br/>
-					<small>Mis à jour le: {formatDate(renderJoke.updatedAt)}</small>
+					<small>Créé le: {formatDate(renderJoke.createdAt)} <br/>
+					Mis à jour le: {formatDate(renderJoke.updatedAt)}</small>
 				</p>
 			</div>
 
