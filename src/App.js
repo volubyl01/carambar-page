@@ -24,7 +24,7 @@ function Header() {
 	return (
 		<header className="App-header">
 			<div>
-				<animated.img
+				<img
 					src={logo}
 					alt="Logo Carambar"
 					className="App-logo"
@@ -36,7 +36,7 @@ function Header() {
 				<animated.img
 					src={logo}
 					alt="Logo Carambar"
-					className="App-logo"
+					className="App-logo2"
 					style={logoProps}
 				/>
 			</div>
