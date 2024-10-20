@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RippleButton from "./RippleButton";
-import { format, parseISO } from 'date-fns';
+import { format} from 'date-fns';
 import { fr } from 'date-fns/locale';
 
 // Définir l'URL de l'API en fonction de l'environnement
@@ -27,10 +27,13 @@ function ApiInteger() {
     const formatDate = (dateString) => {
         if (!dateString) return 'Date inconnue';
         try {
-            const date = parseISO(dateString);
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) {
+                throw new Error('Invalid date');
+            }
             return format(date, "dd MMMM yyyy 'à' HH:mm:ss", { locale: fr });
         } catch (error) {
-            console.error("Erreur de formatage de la date:", error);
+            console.error("Erreur de formatage de la date:", error, "pour la chaîne:", dateString);
             return 'Date invalide';
         }
     };
@@ -51,6 +54,8 @@ function ApiInteger() {
             }
 
             const renderData = await response.json();
+            console.log("Date brute createdAt:", renderData.createdAt);
+            console.log("Date brute updatedAt:", renderData.updatedAt);
             setRenderJoke(renderData);
         } catch (e) {
             console.error("Error fetching joke:", e);
