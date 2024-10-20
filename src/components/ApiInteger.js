@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RippleButton from "./RippleButton";
+import { format, parseISO } from 'date-fns';
+import { fr } from 'date-fns/locale';
 
 // Définir l'URL de l'API en fonction de l'environnement
 const API_URL = process.env.NODE_ENV === 'development'
@@ -9,17 +11,7 @@ const API_URL = process.env.NODE_ENV === 'development'
 console.log("NODE_ENV:", process.env.NODE_ENV);
 console.log("REACT_APP_API_URL:", process.env.REACT_APP_API_URL);
 
-// Fonction pour formater la date
-const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return new Intl.DateTimeFormat('fr-FR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    }).format(date);
-  };
+
 
 function ApiInteger() {
     const [renderJoke, setRenderJoke] = useState(null);
@@ -30,6 +22,18 @@ function ApiInteger() {
     useEffect(() => {
         fetchJoke();
     }, []);
+
+    // pour formater la date
+    const formatDate = (dateString) => {
+        if (!dateString) return 'Date inconnue';
+        try {
+            const date = parseISO(dateString);
+            return format(date, "dd MMMM yyyy 'à' HH:mm:ss", { locale: fr });
+        } catch (error) {
+            console.error("Erreur de formatage de la date:", error);
+            return 'Date invalide';
+        }
+    };
 
     const fetchJoke = async () => {
         try {
@@ -77,11 +81,10 @@ function ApiInteger() {
 
                 <p className="dates">
                     <small>
-                    Créé le: {formatDate(renderJoke.createdAt)}
+                        Créé le: {formatDate(renderJoke.createdAt)}
                     </small>
-
                     <small>
-                        Mis à jour le: {new Date(renderJoke.updatedAt).toLocaleString()}
+                        Mis à jour le: {formatDate(renderJoke.updatedAt)}
                     </small>
                 </p>
             </div>
