@@ -76,7 +76,7 @@ function ApiInteger() {
 
 	if (loading) return <div>Chargement...</div>;
 	if (error) return <div>Erreur : {error}</div>;
-	if (!renderJoke) return <div>Aucune blague trouvée.</div>;
+	if (!renderJoke) return <div>Aucune blague trouvée !</div>;
 
 	return (
 		<div>
