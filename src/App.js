@@ -31,7 +31,7 @@ function Header() {
 					style={logoProps}
 				/>
 			</div>
-			<animated.h1 style={titleProps}>Les blagues Carambar</animated.h1>
+			<animated.h1 style={titleProps} className="title">Les blagues Carambar</animated.h1>
 			<div>
 				<animated.img
 					src={logo}

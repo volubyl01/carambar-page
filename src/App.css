@@ -9,13 +9,10 @@
 	box-sizing: border-box;
 }
 
-.App-content {
-	flex: 1 0 auto;
-}
 
 .App-logo {
 	/* height: 40vmin; */
-	max-width: 40vmin;
+	max-width: 30vmin;
 	height: auto;
 	pointer-events: none;
 	filter: saturate(110%);
@@ -27,13 +24,15 @@
 	pointer-events: none;
 	filter: saturate(110%);
 }
-
+.title {
+	margin : 20px;
+}
 .App-header {
 	width: auto;
 	background-color: #ffee02;
 	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	font-size: 30px;
 	color: rgb(236, 9, 9);
