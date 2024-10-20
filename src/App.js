@@ -6,6 +6,7 @@ import ContactForm from "./components/ContactForm";
 import logo from "./images/logo-carambar.png";
 import AnimatedBackground from "./components/AnimatedBackground";
 
+
 // composant header
 function Header() {
 	const logoProps = useSpring({
@@ -35,7 +36,7 @@ function Header() {
 			<div>
 				<animated.img
 					src={logo}
-					alt="Logo Carambar"
+					alt="Logo Carambar smile"
 					className="App-logo2"
 					style={logoProps}
 				/>

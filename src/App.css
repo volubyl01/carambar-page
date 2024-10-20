@@ -2,23 +2,19 @@
 
 .App {
 	min-height: 100vh;
-	/* text-align: center; */
 	margin: 0;
 	padding: 0;
 	display: grid;
 	box-sizing: border-box;
 }
 
-
 .App-logo {
-	/* height: 40vmin; */
 	max-width: 30vmin;
 	height: auto;
 	pointer-events: none;
 	filter: saturate(110%);
 }
 .App-logo2 {
-	/* height: 40vmin; */
 	max-width: 20vmin;
 	height: auto;
 	pointer-events: none;
@@ -182,14 +178,29 @@ input {
 	.App-header {
 		text-align: center;
 		align-content: center;
-		font-size: 30px;
+		flex-direction:column-reverse;
+		padding: 20px 0 0 0;
 	}
-	h1 {
+	.title {
+		margin : 0;
 		font-size: 1.5em;
 		margin: 0;
 	}
+
 	.App-logo {
+		width: 50vmin;
+		height: auto;
 		pointer-events: none;
+		filter: saturate(110%);
+	}
+	.App-logo2 {
+		width: 15vmin;
+		height: auto;
+		pointer-events: none;
+		filter: saturate(110%);
+	}
+	.title {
+		margin : 2px;
 	}
 	
 	input {

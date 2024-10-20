@@ -18,15 +18,15 @@ function AnimatedBackground() {
 			style={{
 				position: "fixed",
 				top: 0,
-				left: 0,
 				right: 0,
 				bottom: 0,
+				left: 0,
 				zIndex: -1,
 				overflow: "hidden",
 			}}
 		>
 			<animated.img
-				src={process.env.PUBLIC_URL + "/images/carambar_smile.png"}
+				src={process.env.PUBLIC_URL + "/images/carambar_smile.png"} //car l'image n'était pas reconnu dans le dossier publi
 				alt="fond"
 				style={{
 					...props,
