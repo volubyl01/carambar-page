@@ -9,6 +9,18 @@ const API_URL = process.env.NODE_ENV === 'development'
 console.log("NODE_ENV:", process.env.NODE_ENV);
 console.log("REACT_APP_API_URL:", process.env.REACT_APP_API_URL);
 
+// Fonction pour formater la date
+const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat('fr-FR', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    }).format(date);
+  };
+
 function ApiInteger() {
     const [renderJoke, setRenderJoke] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -65,7 +77,7 @@ function ApiInteger() {
 
                 <p className="dates">
                     <small>
-                        Créé le: {new Date(renderJoke.createdAt).toLocaleString()}
+                    Créé le: {formatDate(renderJoke.createdAt)}
                     </small>
 
                     <small>
