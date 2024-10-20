@@ -31,7 +31,7 @@ function ContactForm() {
 			)
 			.then((result) => {
 				console.log(result.text);
-				alert("Message envoyé avec succès !");
+				alert("Demande envoyée avec succès !");
 				setFormData({ from_name: "", from_email: "", message: "" });
 			})
 			.catch((error) => {
