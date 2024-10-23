@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
 
+#content {
+	min-height: 100vh;
+	display:flex;
+	flex-direction: column;
+}
 .App {
 	min-height: 100vh;
 	margin: 0;
@@ -57,6 +62,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: auto;
 }
 
 .api {
