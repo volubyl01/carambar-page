@@ -96,7 +96,7 @@ function ApiInteger() {
 			</div>
 
 			<button onClick={fetchJoke} className="joke-button">
-				Une blaqgue au hasard
+				Une blague au hasard
 			</button>
 		</div>
 	);
